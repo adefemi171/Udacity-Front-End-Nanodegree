@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box {
+                min-height: 150px;
+            }
+            .dark_yellow{
+                background: yellow;
+            }
+            .light_yellow{
+                background: yellowgreen;
+            }
+            .red{
+                background: red;
+            }
+            .pink{
+                background: pink;
+            }
+          
+        </style>
+        <style>
+         
+            .container{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box {
+                width: 100%;
+            }
+            @media screen and (min-width:300px){
+                .dark_yellow{
+                    width: 50%;
+                }
+                #container2 {
+                    width: 50%;
+                }
+              
+            }
+            @media screen and (min-width:500px){
+                .dark_yellow{
+                    width: 25%;
+                    order: 1;
+                }
+                #container2 {
+                    width: 50%;
+                }
+                .pink{
+                    width: 25%;
+                    order: -1;
+                }
+                
+            }
+            @media screen and (min-width: 700px){
+                .container{
+                    width: 700px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="box dark_yellow"></div>
+            <div class="container" id="container2">
+                    <div class="box light_yellow"></div>
+                    <div class="box red"></div>
+            </div>
+            
+            <div class="box pink"></div>
+           
+        </div>
+    </body>
+</html

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box {
+                min-height: 150px;
+            }
+            .dark_yellow{
+                background: yellow;
+            }
+            .light_yellow{
+                background: yellowgreen;
+            }
+            .red{
+                background: red;
+            }
+            .orange{
+                background: orange;
+            }
+            .green{
+                background: green;
+            }
+        </style>
+        <style>
+         
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box {
+                width: 100%;
+            }
+            @media screen and (min-width:300px){
+                .dark_yellow, .red{
+                    width: 50%;
+                }
+              
+            }
+            @media screen and (min-width:500px){
+                .dark_yellow, .light_yellow{
+                    width: 50%;
+                }
+                .red, .green, .orange{
+                    width: 33.33333%;
+                }
+            }
+            @media screen and (min-width: 700px){
+                .container{
+                    width: 700px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="box dark_yellow"></div>
+            <div class="box light_yellow"></div>
+            <div class="box red"></div>
+            <div class="box orange"></div>
+            <div class="box green"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           
+            .dark_yellow{
+                background: yellow;
+            }
+            .light_yellow{
+                background: yellowgreen;
+            }
+            
+            html, body{
+                height: 100%;
+                width:100%;
+            }
+            a#menu svg{
+                width: 40px;
+                fill: #000;
+            }
+            nav, main{
+                padding: 1em;
+                box-sizing: border-box;
+            }
+            main{
+                width: 100%;
+                height: 100%;
+            }
+            nav{
+                width: 300px;
+                height: 100%;
+                position: absolute;
+                -webkit-transform:  translate(-300px, 0);
+                transform: translate(-300px, 0);
+                transition: transform 0.3s ease;
+            }
+            nav.open{
+                -webkit-transform: translate(0, 0);
+                transform: translate(0,0);
+            }
+          
+        </style>
+        <style>
+         
+           
+            @media screen and (min-width:500px){
+                    nav{
+                        position: relative;
+                        -webkit-transform: translate(0,0);
+                        transform: translate(0,0)
+                    }
+                    body{
+                        display: flex;
+                        display: -webkit-flex;
+                        flex-flow: row nowrap;
+                        -webkit-flex-flow: row nowrap;
+                    }
+                    main{
+                        width: auto;
+                        flex-grow: 1;
+                    }    
+            }
+
+            @media screen and (min-width:500px){
+                main > #menu:after{
+                    content: 'The drawer stay open if width > 500px'
+                }
+                main p, nav p{
+                    text-decoration: line-through;
+                }
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <nav id="drawer" class="dark_yellow">
+            <h2>Off Canvas</h2>
+            <p>Click outside the drawer to close</p>
+        </nav>
+        <main class="light_yellow">
+             <a id="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+                </svg>
+            </a>
+            <p>Click on the menu icon to open the drawer</p>
+        </main>
+        
+      <script>
+            /*
+             * Open the drawer when the menu ison is clicked.
+             */
+            var menu = document.querySelector('#menu');
+            var main = document.querySelector('main');
+            var drawer = document.querySelector('#drawer');
+
+            menu.addEventListener('click', function(e) {
+                drawer.classList.toggle('open');
+                e.stopPropagation();
+            });
+            main.addEventListener('click', function() {
+                drawer.classList.remove('open');
+            });
+
+        </script>
+    </body>
+</html

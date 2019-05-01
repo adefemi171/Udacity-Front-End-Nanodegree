@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .box {
+                min-height: 150px;
+            }
+            .dark_yellow{
+                background: yellow;
+            }
+            .light_yellow{
+                background: yellowgreen;
+            }
+            .red{
+                background: red;
+            }
+        </style>
+        <style>
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .box {
+                width: 100%;
+            }
+            @media screen and (min-width:300px){
+                .dark_yellow{
+                    width: 25%;
+                }
+                .light_yellow{
+                    width: 75%;
+                }
+            }
+            @media screen and (min-width:500px){
+                .dark_yellow, .red{
+                    width: 25%;
+                }
+                .light_yellow{
+                    width: 50%;
+                }
+            }
+        </style>
+        
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="box dark_yellow"> </div>
+            <div class="box light_yellow"></div>
+            <div class="box red"></div>
+        </div>
+    </body>
+</html>
