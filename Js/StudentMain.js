@@ -1,11 +1,25 @@
 /*
+ * Programming Quiz: First Expression (2-1)
+ *
+ * Write an expression that uses at least three, different, arithmetic operators
+ * to log the number 42 to the console.
+ */
+
+// this expression equals 4, change it to equal 42
+console.log(21 * 2);
+console.log(10 + 10 + 22);
+console.log(50 - 16 + 8 + 6 + 2);
+
+
+
+/*
  * Programming Quiz: Converting Tempatures (2-2)
  *
  * The Celsius-to-Fahrenheit formula:
  *
  *    F = C x 1.8 + 32
  *
- * 1. Set the fahrenheit variable to the correct value using the celsius variable and the forumla above
+ * 1. Set the fahrenheit variable to the correct value using the celsius variable and the formula above
  * 2. Log the fahrenheit variable to the console
  *
  */
@@ -138,10 +152,10 @@ console.log(awesomeMessage);
 var number = 2;
 
 if (number % 2 == 0) {
-     console.log("Number is Even")
+     console.log("Number is Even");
     
 } else {
-     console.log("Number is Odd")
+     console.log("Number is Odd");
 }
 
 /*
@@ -539,3 +553,625 @@ for (var x = 0; x <= 25; x = x + 1) {
        console.log(x + "-" + y);
      }
    }
+
+
+   /*
+ * Programming Quiz: Laugh it Off 1 (5-1)
+ function laugh(word, times) {
+     var sentence ="";
+     while (times > 0){
+          sentence += times;
+          times--;
+     }
+     return sentence;
+}
+
+console.log(laugh("ha", 3));
+ */
+
+// your code goes here
+
+function laugh(word, times) {
+     var sentence ="";
+     while (times > 0){
+          sentence += word;
+          times--;
+     }
+     return sentence;
+}
+
+laugh(("ha", 3) + "!");
+
+
+/*
+ * Programming Quiz: Build A Triangle (5-3)
+ */
+
+// creates a line of * for a given length
+function makeLine(length) {
+     var line = "";
+     for (var j = 1; j <= length; j++) {
+         line += "* ";
+     }
+     return line + "\n";
+ }
+ 
+ // your code goes here.  Make sure you call makeLine() in your own code.
+function buildTriangle(height) {
+    var starTriangle = "";
+    for (var k = 1; k <= height; k++) {
+        starTriangle += makeLine(k);
+    }
+    return starTriangle;
+}
+ 
+ // test your code by uncommenting the following line
+ console.log(buildTriangle(10));
+
+
+
+ /*
+ * Programming Quiz: Laugh (5-4)
+ laugh(("ha", 3) + "!");
+ */
+
+var laugh = function (times) {
+     var sentence ="";
+     var word = "ha";
+     while (times > 0){
+          sentence += word;
+          times--;
+     }
+     sentence = sentence + "!";
+     return sentence;
+     
+};
+
+
+
+/* finish the function expression */
+
+console.log(laugh(10));
+
+
+
+ /* Programming Quiz: Cry (5-5)
+ */
+
+// your code goes here
+
+var cry = function crying(){
+     return "boohoo!";
+};
+
+console.log(cry());
+
+
+
+/*
+ * Programming Quiz: Inline Functions (5-6)
+ */
+
+// don't change this code
+function emotions(myString, myFunc) {
+    console.log("I am " + myString + ", " + myFunc(2));
+}
+
+// your code goes here
+// call the emotions function here and pass in an
+// inline function expression
+emotions("happy", function(times){
+     var sentence ="";
+     var word = "ha";
+     while (times > 0){
+          sentence += word;
+          times--;
+     }
+     sentence = sentence + "!";
+     return sentence;
+     
+
+});
+
+
+
+/*
+ * Programming Quiz: UdaciFamily (6-1)
+ */
+
+// your code goes here
+var udaciFamily = ["Julia", "James","potus"];
+
+console.log(udaciFamily[0]);
+
+
+/*
+ * Programming Quiz: Building the Crew (6-2)
+ */
+var crew =[];
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+// your code goes here
+crew[0] = captain;
+crew[1] = second;
+crew[2] = pilot;
+crew[3] = companion;
+crew[4] = mercenary;
+crew[5] = mechanic;
+console.log(crew[0]);
+
+/*
+ * Programming Quiz: The Price is Right (6-3)
+ */
+
+var prices = [1.23, 48.11, 90.11, 8.50, 9.99, 1.00, 1.10, 67.00];
+
+// your code goes here
+prices[0] = 2.25;
+prices[2] = 3.80;
+prices[6] = 2.67;
+
+
+/*
+ * Programming Quiz: Colors of the Rainbow (6-4)
+ *
+ * Use only the splice() method to modify the rainbow variable:
+ *  - remove "Blackberry"
+ *  - add "Yellow" and "Green"
+ *  - add "Purple"
+ */
+
+var rainbow = ['Red', 'Orange', 'Blackberry', 'Blue'];
+
+// your code goes here
+rainbow.splice(2,1, "Yellow", "Green", "Purple");
+
+
+
+/*
+ * Programming Quiz: Quidditch Cup (6-5)
+ */
+
+// your code goes here
+function hasEnoughPlayers(a){
+     
+     var tam = [];
+     a = tam;
+     
+     //if team.length === 7
+     if (tam.length == 6){
+         return true;
+     }else{
+         return false;
+     }
+
+     
+}
+var team = ["Oliver Wood", "Angelina Johnson", "Katie Bell", "Alicia Spinnet", "George Weasley", "Fred Weasley", "Harry Potter"];
+console.log(hasEnoughPlayers(team));
+
+
+
+/*
+ * Programming Quiz: Joining the Crew (6-6)
+ */
+
+var captain = "Mal";
+var second = "Zoe";
+var pilot = "Wash";
+var companion = "Inara";
+var mercenary = "Jayne";
+var mechanic = "Kaylee";
+
+var crew = [captain, second, pilot, companion, mercenary, mechanic];
+
+var doctor = "Simon";
+var sister = "River";
+var shepherd = "Book";
+
+// your code goes here
+crew.push(doctor);
+crew.push(sister);
+crew.push(shepherd);
+
+/*
+ * Programming Quiz: Another Type of Loop (6-8)
+ *
+ * Use the existing `test` variable and write a `forEach` loop
+ * that adds 100 to each number that is divisible by 3.
+ *
+ * Things to note:
+ *  - you must use an `if` statement to verify code is divisible by 3
+ *  - you can use `console.log` to verify the `test` variable when you're finished looping
+ */
+
+var test = [12, 929, 11, 3, 199, 1000, 7, 1, 24, 37, 4,
+     19, 300, 3775, 299, 36, 209, 148, 169, 299,
+     6, 109, 20, 58, 139, 59, 3, 1, 139
+ ];
+
+ // Write your code here
+
+test.forEach(function(element, index, array){
+     if (element % 3 === 0){
+          array[index] = element + 100;
+     }
+});
+
+console.log(test);
+
+/*
+* Using Map Function to loop over array in JavaScript
+* An Example is using the donut array
+*It also returns a new array
+*/
+
+/*
+ * Programming Quiz: I Got Bills (6-9)
+ *
+ * Use the .map() method to take the bills array below and create a second array
+ * of numbers called totals. The totals array should contains each amount from the
+ * bills array but with a 15% tip added. Log the totals array to the console.
+ *
+ * For example, the first two entries in the totals array would be:
+ *
+ * [57.76, 21.99, ... ]
+ *
+ * Things to note:
+ *  - each entry in the totals array must be a number
+ *  - each number must have an accuracy of two decimal points
+ */
+
+var bills = [50.23, 19.12, 34.01,
+    100.11, 12.15, 9.90, 29.11, 12.99,
+    10.00, 99.22, 102.20, 100.10, 6.77, 2.22
+];
+
+var totals = bills.map(function(bills){
+     bills = bills + (bills * (15 / 100));
+     bills = bills.toFixed(2);
+     return Number(bills);
+});
+
+console.log(totals);
+
+
+var donutBox = [
+  ["glazed", "chocolate glazed", "cinnamon"],
+  ["powdered", "sprinkled", "glazed cruller"],
+  ["chocolate cruller", "Boston creme", "creme de leche"]
+];
+
+for (var row = 0; row < donutBox.length; row++) {
+  // here, donutBox[row].length refers to the length of the donut array currently being looped over
+  for (var column = 0; column < donutBox[row].length; column++) {
+    console.log(donutBox[row][column]);
+  }
+}
+
+
+/*
+ * Programming Quiz: Nested Numbers (6-10)
+ *
+ *   - The `numbers` variable is an array of arrays.
+ *   - Use a nested `for` loop to cycle through `numbers`.
+ *   - Convert each even number to the string "even"
+ *   - Convert each odd number to the string "odd"
+ */
+
+var numbers = [
+    [243, 12, 23, 12, 45, 45, 78, 66, 223, 3],
+    [34, 2, 1, 553, 23, 4, 66, 23, 4, 55],
+    [67, 56, 45, 553, 44, 55, 5, 428, 452, 3],
+    [12, 31, 55, 445, 79, 44, 674, 224, 4, 21],
+    [4, 2, 3, 52, 13, 51, 44, 1, 67, 5],
+    [5, 65, 4, 5, 5, 6, 5, 43, 23, 4424],
+    [74, 532, 6, 7, 35, 17, 89, 43, 43, 66],
+    [53, 6, 89, 10, 23, 52, 111, 44, 109, 80],
+    [67, 6, 53, 537, 2, 168, 16, 2, 1, 8],
+    [76, 7, 9, 6, 3, 73, 77, 100, 56, 100]
+];
+
+// your code goes here
+for (var i = 0; i < numbers.length; i++){
+     for (var j = 0; j < numbers[i].length; j++){
+          if (numbers[i][j] % 2 === 0){
+               numbers[i][j] = "even";
+          }else{
+               numbers[i][j] = "odd";
+          }
+          console.log(numbers[i][j]);
+     }
+}
+console.log(numbers);
+
+
+/*
+ * Programming Quiz: Umbrella (7-1)
+ */
+
+var umbrella = {
+    color: "pink",
+    isOpen: true,
+    isClose: false,
+    open: function() {
+        if (umbrella.isOpen === true) {
+            return "The umbrella is already opened!";
+        } else {
+            umbrella.isOpen = true;
+            return "Julia opens the umbrella!";
+        }
+    },
+    // your code goes here
+    close: function(){
+          if (umbrella.isClose === true){
+               return "The umbrella is already closed!";
+          }else {
+               umbrella.isClose = true;
+               return "Julia closed the umbrella";
+          }
+    },
+};
+
+
+/*
+ * Programming Quiz: Menu Items (7-2)
+ */
+
+// your code goes here
+var breakfast = {
+     name: "The Lumberjack",
+     price: 9.95,
+     ingredients: ["eggs", "sausage", "toast", "hashbrowns", "pancakes"]
+};
+
+
+
+/*
+ * Programming Quiz: Bank Accounts 1 (7-3)
+ */
+
+var savingsAccount = {
+    balance: 1000,
+    interestRatePercent: 1,
+    deposit: function addMoney(amount) {
+        if (amount > 0) {
+            savingsAccount.balance += amount;
+        }
+    },
+    withdraw: function removeMoney(amount) {
+        var verifyBalance = savingsAccount.balance - amount;
+        if (amount > 0 && verifyBalance >= 0) {
+            savingsAccount.balance -= amount;
+        }
+    },
+    // your code goes here
+    printAccountSummary: function accountSummary(){
+         return "Your balance is currently $" + savingsAccount.balance + " and your interest rate is " + savingsAccount.interestRatePercent + "%.";
+    },
+};
+
+console.log(savingsAccount.printAccountSummary());
+
+
+/*
+ * Programming Quiz: Facebook Friends (7-5)
+ * Create an object called facebookProfile. The object should have 3 properties:
+* Your name
+* The number of friends you have, and
+* An array of messages you've posted (as strings)
+* The object should also have 4 methods:
+
+* postMessage(message) - adds a new message string to the array
+* deleteMessage(index) - removes the message corresponding to the index provided
+* addFriend() - increases the friend count by 1
+* removeFriend() - decreases the friend count by 1
+ */
+
+// your code goes here
+var facebookProfile = {
+     name: "Afuwape Adefemi Micheal",
+     friends: 3,
+     messages: ["Haja", "Raven", "Norman", "Holmes"],
+     postMessage: function(message) {
+          return facebookProfile.messages.push(message);
+     },
+     deleteMessage: function(index) {
+          return facebookProfile.messages.splice(index,1);
+     },
+     addFriend: function() {
+          return facebookProfile.friends+= 1;
+     },
+     removeFriend: function() {
+          return facebookProfile.friends-= 1;
+     }
+};
+
+
+/*
+ * Programming Quiz: Donuts Revisited (7-6)
+ */
+
+var donuts = [
+    { type: "Jelly", cost: 1.22 },
+    { type: "Chocolate", cost: 2.45 },
+    { type: "Cider", cost: 1.59 },
+    { type: "Boston Cream", cost: 5.99 }
+];
+
+// your code goes here
+donuts.forEach(function(donut) {
+    console.log(donut.type + " donuts cost $" + donut.cost + " each");
+});
+
+
+/*
+ * Programming Quiz: Using Let and Const (1-1)
+ *
+ * * Replace the variable declarations using let or const.
+ */
+
+let CHARACTER_LIMIT = 255;
+let posts = [
+	"#DeepLearning transforms everything from self-driving cars to language translations. AND it's our new Nanodegree!",
+	"Within your first week of the VR Developer Nanodegree Program, you'll make your own virtual reality app",
+	"I just finished @udacity's Front-End Web Developer Nanodegree. Check it out!"
+];
+
+// prints posts to the console
+function displayPosts() {
+	for (let i = 0; i < posts.length; i++) {
+		console.log(posts[i].slice(0, CHARACTER_LIMIT));
+	}
+}
+
+displayPosts();
+
+
+/*
+ * Instructions: Change the `greeting` string to use a template literal.
+ */
+
+const myName = 'Adefemi';
+const greeting = `Hello, my name is` + myName;
+console.log(greeting);
+
+//let message = `${student.name} please see ${teacher.name} in ${teacher.room} to pick up your report card.`;
+
+
+
+/*
+ * Programming Quiz: Build an HTML Fragment (1-2)
+ */
+
+const cheetah = {
+    name: 'Cheetah',
+    scientificName: 'Acinonyx jubatus',
+    lifespan: '10-12 years',
+    speed: '68-75 mph',
+    diet: 'carnivore',
+    summary: 'Fastest mammal on land, the cheetah can reach speeds of 60 or perhaps even 70 miles (97 or 113 kilometers) an hour over short distances. It usually chases its prey at only about half that speed, however. After a chase, a cheetah needs half an hour to catch its breath before it can eat.',
+    fact: 'Cheetahs have “tear marks” that run from the inside corners of their eyes down to the outside edges of their mouth.'
+};
+
+/** creates an animal trading card
+function createAnimalTradingCardHTML(animal) {
+    const cardHTML = '<div class="card">' +
+        '<h3 class="name">' + animal.name + '</h3>' +
+        '<img src="' + animal.name + '.jpg" alt="' + animal.name +'" class="picture">' +
+        '<div class="description">' +
+            '<p class="fact">' + animal.fact + '</p>' +
+            '<ul class="details">' +
+                '<li><span class="bold">Scientific Name</span>: ' + animal.scientificName + '</li>' +
+                '<li><span class="bold">Average Lifespan</span>: ' + animal.lifespan + '</li>' +
+                '<li><span class="bold">Average Speed</span>: ' + animal.speed + '</li>' +
+                '<li><span class="bold">Diet</span>: ' + animal.diet + '</li>' +
+            '</ul>' +
+            '<p class="brief">' + animal.summary + '</p>' +
+        '</div>' +
+    '</div>';
+
+    return cardHTML;
+}
+
+*/
+
+function createAnimalTradingCardHTML(animal) {
+    const cardHTML = `<div class="card"> 
+        <h3 class="name"> ${animal.name} </h3> 
+        <img src="  ${animal.name}.jpg  alt="  ${animal.name} " class="picture"> 
+        <div class="description">
+            <p class="fact"> ${animal.fact} </p> 
+            <ul class="details"> 
+                <li><span class="bold">Scientific Name</span>:  ${animal.scientificName} </li>
+                <li><span class="bold">Average Lifespan</span>:  ${animal.lifespan} </li>
+                <li><span class="bold">Average Speed</span>:  ${animal.speed} </li>
+                <li><span class="bold">Diet</span>:   ${animal.diet} </li>
+            </ul>
+            <p class="brief"> ${animal.summary} </p>
+        </div>
+    </div>`;
+
+    return cardHTML;
+}
+
+console.log(createAnimalTradingCardHTML(cheetah));
+
+
+
+/*
+ * Programming Quiz: Destructuring Arrays (1-3)
+ *
+ * Use destructuring to initialize the variables `one`, `two`, and `three`
+ * with the colors from the `things` array.
+ */
+
+const things = ['red', 'basketball', 'paperclip', 'green', 'computer', 'earth', 'udacity', 'blue', 'dogs'];
+
+//const one = things;
+//const two = '';
+//const three = '';
+const [one, ,two , , ,three , , , ] = things;
+
+const colors = `List of Colors
+1. ${one}
+2. ${two}
+3. ${three}`;
+
+console.log(colors);
+
+
+
+/*
+ * Programming Quiz: Writing a For...of Loop (1-4)
+ * Write a for...of loop that:
+
+* loops through each day in the days array
+* capitalizes the first letter of the day
+* and prints the day out to the console
+
+ */
+
+const days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+
+// your code goes here
+for (let day of days){
+     day = day[0].toUpperCase() + day.slice(1);
+     console.log(day);
+}
+
+
+/*
+ * Instructions: Use the spread operator to combine the `fruits` and `vegetables` arrays into the `produce` array.
+ */
+
+const fruits = ["apples", "bananas", "pears"];
+const vegetables = ["corn", "potatoes", "carrots"];
+
+const produce = [...fruits, ...vegetables];
+
+console.log(produce);
+
+
+
+function average(...nums) {
+    let total = 0;
+    for(const num of nums){
+        total += num;
+    }
+    if (nums.length=== 0) {
+        return 0;
+
+    }
+    return total/nums.length
+}
+
+console.log(average(2, 6));
+console.log(average(2, 3, 3, 5, 7, 10));
+console.log(average(7, 1432, 12, 13, 100));
+console.log(average());
